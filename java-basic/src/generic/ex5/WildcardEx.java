@@ -21,4 +21,10 @@ public class WildcardEx {
         Animal animal = box.get();
         System.out.println("이름 = " + animal.getName());
     }
+
+    static Animal printAndReturnWildcard(Box<? extends Animal> box) {
+        Animal animal = box.get();
+        System.out.println("이름 = " + animal.getName());
+        return animal;
+    }
 }
